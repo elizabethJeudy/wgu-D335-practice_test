@@ -13,38 +13,25 @@ change %= 5
 penny = change // 1
 change %= 1
 
-# checks if there is any change
-if dollar == 0 and quarter == 0 and dime == 0 and nickel == 0 and penny == 0:
-    print("No change")
-
+# build parts and print them on a single line separated by spaces
+parts = []
 
 if dollar > 0:
-    if dollar == 1:
-        print("1 Dollar")  # singular
-    else:
-        print(f'{dollar} Dollars')  # plural
-
+    parts.append("1 Dollar" if dollar == 1 else f"{dollar} Dollars")
 
 if quarter > 0:
-    if quarter == 1:
-        print("1 Quarter")
-    else:
-        print(f'{quarter} Quarters')
+    parts.append("1 Quarter" if quarter == 1 else f"{quarter} Quarters")
 
 if dime > 0:
-    if dime == 1:
-        print("1 Dime")
-    else:
-        print(f'{dime} Dimes')
+    parts.append("1 Dime" if dime == 1 else f"{dime} Dimes")
 
 if nickel > 0:
-    if nickel == 1:
-        print("1 Nickel")
-    else:
-        print(f'{nickel} Nickels')
+    parts.append("1 Nickel" if nickel == 1 else f"{nickel} Nickels")
 
 if penny > 0:
-    if penny == 1:
-        print('1 Penny')
-    else:
-        print(f'{penny} Pennies')
+    parts.append("1 Penny" if penny == 1 else f"{penny} Pennies")
+
+if parts:
+    print(" ".join(parts))
+else:
+    print("No change")
