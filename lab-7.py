@@ -7,3 +7,23 @@
 # The solution should produce the output in the following format:
 
 # True if the input is in the list, otherwise False.
+
+predef_list = [4, -27, 15, 33, -10]
+
+# grabs user input
+user_input = int(input("Enter the number to check for in the list:\n"))
+
+# function checks arguments (user input to predefined list) and returns true or false
+
+
+def is_in_list(predef_list, user_input):
+    if user_input in predef_list:
+        print("Is the input present in the list?", end=' ')
+        return True
+    else:
+        print("Is the input present in the list?", end=' ')
+        return False
+
+
+if __name__ == '__main__':
+    print(is_in_list(predef_list, user_input))
