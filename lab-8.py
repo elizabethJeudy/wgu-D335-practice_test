@@ -9,3 +9,15 @@
 # frameworks_element
 
 frameworks = ["Django", "Flask", "CherryPy", "Bottle", "Web2Py", "TurboGears"]
+
+# use try block with exception "Error" when index value is not found in list
+# solution accepts an integer input
+# solution outputs the corresponding string value for the integer input
+
+# try-block to determine value
+try:
+    index_value = int(
+        input("Enter the index of the element that you want to extract from the list:\n"))
+    print(frameworks[index_value])
+except:
+    print("Error")
